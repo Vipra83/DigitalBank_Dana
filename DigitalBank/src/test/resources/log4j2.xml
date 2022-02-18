@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status = "DEBUG">
+    <Appender>
+        <Console name="ConsoleLogger" target="SYSTEM_OUT">
+            <PatternLayout pattern ="[%level] %d{HH:mm:ss.SSS} - %msg %l%n"/>
+        </Console>
+        <File name = "Digital Bank DB" fiename = "logs/app${date:yyyy-MM-dd}.log" append ="false">
+            <PatternLayout pattern ="[%level] %d{HH:mm:ss.SSS}- %msg %l%n"/>
+        </File>
+    </Appender>
+    <Loggers>
+        <Root level = "DEBUG">
+            <AppenderRef ref= "ConsoleLogger"/>
+            <AppenderRef ref = "Digital Bank DB"/>
+        </Root>
+    </Loggers>
+
+
+
+</Configuration>
